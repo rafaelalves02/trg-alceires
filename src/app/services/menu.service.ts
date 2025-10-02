@@ -12,9 +12,17 @@ export class MenuService {
         url: '#banner'
       },
       {
+        name: 'Tratamentos',
+        url: '#treatments'
+      },
+      {
         name: 'Sobre mim',
         url: '#about'
-      }
+      },
+      {
+        name: 'Tratamentos',
+        url: '#treatments'
+      },
     ];
 
     return menu;
