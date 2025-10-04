@@ -1,7 +1,7 @@
 <nav>
     <h1>Alceires Alves</h1>
     <ul [class]="menuStatus">
-        <li *ngFor="let item of menuItems">
+        <li (click)="menuItemClick()" *ngFor="let item of menuItems">
             <a [href]="item.url">{{item.name}}</a>
         </li>
     </ul>

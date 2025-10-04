@@ -28,6 +28,10 @@ export class MenuComponent {
       this.menuStatus = (this.menuStatus === 'open' ? 'closed' : 'open')
     }
 
+    menuItemClick() {
+      this.menuStatus = 'closed';
+    }
+
     openWhatsApp() {
       window.open(this.whatsappLink, '_blank');
     }

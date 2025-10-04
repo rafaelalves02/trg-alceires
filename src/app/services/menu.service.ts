@@ -16,13 +16,13 @@ export class MenuService {
         url: '#treatments'
       },
       {
-        name: 'Sobre mim',
-        url: '#about'
+        name: 'Abordagem',
+        url: '#methods'
       },
       {
-        name: 'Tratamentos',
-        url: '#treatments'
-      },
+        name: 'Sobre mim',
+        url: '#about'
+      }
     ];
 
     return menu;

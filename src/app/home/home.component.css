@@ -27,7 +27,7 @@ main {
 .banner {
     width: 100%;
     height: 1100px; /* 850px */
-    background: linear-gradient(to top, var(--color-blue-1) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/banner-image.png') no-repeat;
+    background: linear-gradient(to top, var(--color-blue-2) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/banner-image.png') no-repeat;
     background-position: center center;
     background-size: cover; 
     box-shadow: 0px 15px 12px #00000069; 
@@ -64,10 +64,14 @@ main {
     margin: 10px auto;
 }
 
+.banner .text .banner-whatsapp-button:hover {
+    background-color: #20b358;
+}
+
 /* treatments */
 
 .treatments {
-    padding: 80px 30px;
+    padding: 100px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -102,28 +106,86 @@ main {
 /* methods */
 
 .methods {
-    background-image: url('/assets/methods-image.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center left;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    box-shadow:  0px 15px 12px #00000069;
+   background: linear-gradient(to top  , var(--color-blue-3) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/methods-image.jpg') no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   height: 1100px;
+   padding: 0 30px 30px 30px;
+   box-shadow: 0px 15px 12px #00000069;
 }
 
 .methods .content {
-    background-color: #fff;
-    padding: 40px;
-    height: 550px;
-    max-width: 700px;
-    border-radius: 35px;
+    padding: 30px;/*50*/
+    max-width: 600px;
+    opacity: 0.95;
+    color: #000;/**/
+    background-color: #ffffffc9;
+    border-radius: 25px;
+}   
+
+.methods .content h1 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
+
+.methods .content p {
+    line-height: 1.3;
+    color: #000;
+    font-size: .95rem;
+    margin-bottom: 10px;
+}
+
+.methods .content .methods-whatsapp-button {
+    display: flex;
+    width: fit-content;
+    color: #fff;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px 0 0 0;
+}
+
+.methods .content .methods-whatsapp-button:hover {
+    background-color: #20b358;
+}
+
+/* about */
+
+.about .box {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .box .img {
+    flex: 1;
+    margin: 0 auto 20px;
+}
+
+.about .box .img img {
+    width: 240px;
+    border-radius: 50%;
+}
+
+.about .box .text {
+    flex: 2;
+}
+
+.about .box .text h3 {
+    color: var(--color-blue-2);
+    margin-top: 15px;
+}
+
+.about .box .text p {
+    margin: 15px 0;
+    text-align: justify;
+}
+
 
 @media (min-width: 768px) {
     .banner {
-        background: linear-gradient(to right, var(--color-blue-1) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/banner-image.png') no-repeat center center;
+        background: linear-gradient(to right, var(--color-blue-2) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/banner-image.png') no-repeat center center;
         background-size: cover;
         display: block;
     }
@@ -146,20 +208,62 @@ main {
     /* treatments */
 
     .treatments {
-    padding: 100px 70px;
+       padding: 100px 70px;
     }
 
     .treatments .treatments-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+
+    /*about*/
+
+    .about .box {
+        flex-direction: row;
+    }
+
+    .about .box .img img {
+        width: 100%;
+    }
+
+    .about .box .text {
+        padding-left: 40px;
+    }
+
+
 }
+
+@media (min-width: 1024px) {
+     .methods {
+        background: linear-gradient(to left  , var(--color-blue-3) 40%, rgba(51, 72, 157, 0) 70%),url('/assets/methods-image.jpg') no-repeat;      
+        height: 900px;
+        justify-content: flex-end;
+    }
+
+    .methods .content {
+        background-color: transparent;
+        max-width: 650px;
+        margin-left: auto;
+        padding: 80px 20px 80px 50px;
+        color: #fff;
+    }
+
+    .methods .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .methods .content p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #fff;
+    }
 }
 
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s forwards;
     z-index: 1;
- }
+}
 
 @keyframes fadeIn {
  to { opacity: 1; }
